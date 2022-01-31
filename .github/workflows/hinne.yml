@@ -5,8 +5,12 @@ on:
   workflow_dispatch:
     inputs:
       name:
-        description: 'Person to greet'
-        default: 'World'
+        description: 'Name:'
+        default: 'Name'
+        required: true     
+      live:
+        description: 'Address:'
+        default: 'House'
         required: true
 
 jobs:

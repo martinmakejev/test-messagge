@@ -8,7 +8,7 @@ on:
         description: 'Name:'
         default: 'Name'
         required: true     
-      live:
+      home:
         description: 'Address:'
         default: 'House'
         required: true

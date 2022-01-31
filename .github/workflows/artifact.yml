@@ -1,19 +1,22 @@
-# This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Upload artifact
 
-on: [push]
+on:
+  push:
+    branches: [ '*' ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
 
 jobs:
-  job1:
-    name: Upload artifact
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - shell: bash
-        run: |
-          echo "Hello World}"
-      - name: Upload 
-        uses: actions/upload-artifact@v2
+      - run: date > /tmp/date.txt
+      
+      - uses: actions/upload-artifact@v2
         with:
-          name: homework
-          path: math-homework.txt
+          name: date-file
+          path: /tmp/date.txt

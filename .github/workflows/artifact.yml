@@ -15,5 +15,5 @@ jobs:
       - name: Upload 
         uses: actions/upload-artifact@v2
         with:
-          name: HelloWorld
-          path: HelloWorld.txt
+          name: homework
+          path: math-homework.txt

@@ -1,0 +1,23 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+on: [push]
+
+jobs:
+  job1:
+    name: Upload artifact
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download math result for job 1
+        uses: actions/download-artifact@v2
+        with:
+          name: homework
+      - shell: bash
+        run: |
+          echo "Hello World}"
+      - name: Upload 
+        uses: actions/upload-artifact@v2
+        with:
+          name: HelloWorld
+          path: HelloWorld.txt
